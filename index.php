@@ -218,7 +218,7 @@ $age = 38;
 $name1 = "ajs {$age} jhk $age ... "; // usar aspas duplas pois pode usar uma variavel dentro da string
 // $name2 = 'fkk {$age} dff $age'; // com aspas simples não funciona a variavel
 
-echo $name1; 
+// echo $name1; 
 echo strlen($name1);
 // echo $name2; 
 
