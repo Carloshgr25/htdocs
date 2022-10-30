@@ -222,4 +222,3 @@ $name1 = "ajs {$age} jhk $age ... "; // usar aspas duplas pois pode usar uma var
 echo strlen($name1);
 // echo $name2; 
 //primeiro commit dia 291022
-
