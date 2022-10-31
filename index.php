@@ -221,3 +221,6 @@ $name1 = "ajs {$age} jhk $age ... "; // usar aspas duplas pois pode usar uma var
 echo $name1; 
 echo strlen($name1); //strlen, conta o numero de caracteres
 // echo $name2; 
+// echo strlen($name1);
+// echo $name2; 
+//31/10/22
