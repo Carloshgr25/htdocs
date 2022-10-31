@@ -219,7 +219,5 @@ $name1 = "ajs {$age} jhk $age ... "; // usar aspas duplas pois pode usar uma var
 // $name2 = 'fkk {$age} dff $age'; // com aspas simples não funciona a variavel
 
 echo $name1; 
-echo strlen($name1);
+echo strlen($name1); //strlen, conta o numero de caracteres
 // echo $name2; 
-
-
