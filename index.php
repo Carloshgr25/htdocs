@@ -214,14 +214,104 @@
     //Tipos de dados - String
 
 
-$age = 38;
-$name1 = "ajs {$age} jhk $age ... "; // usar aspas duplas pois pode usar uma variavel dentro da string
+// $age = 38;
+// $name1 = "aaaaabbbbbccccc {$age} eeeeefffffggggg $age ... "; // usar aspas duplas pois pode usar uma variavel dentro da string
 // $name2 = 'fkk {$age} dff $age'; // com aspas simples não funciona a variavel
 
-echo $name1; 
-echo strlen($name1); //strlen, conta o numero de caracteres
+// echo $name1; 
+// echo strlen($name1); //strlen, conta o numero de caracteres
 // echo $name2; 
 // echo strlen($name1);
 // echo $name2; 
 //31/10/22
 // Teste pull 01/11/22
+
+// echo substr($name1 , 0, 7 ); // mostra os caracteres do intervalo que definiu
+
+// echo str_contains($name1, 'ggggg'); //verifica se existe o que esta entre aspas na variavel
+
+
+    // Tipos de dados Number
+
+
+// $number1 = 15;
+// $number2 = '25';//reconhece que é numero
+// $number3 = '12 anos';
+
+// if (is_numeric($number1) && is_numeric($number2)) { // is_numeric verifica se o valor das variaveis são numericas
+//     echo 'É numerico';
+// }else {
+//     echo 'Não é numerico';
+// }
+
+// echo ceil(15.12); // arredonda para cima
+// echo floor(15.12); //arredonda para baixo
+
+
+    //Arrays
+
+
+// $data = ['Carlos', 'Maria', 'joão', 34];
+
+// $data[4] = 'last'; //adiciona elemento na posição 4 no array
+
+// $length = count ($data); //conta os elementos do array começa pelo numero 1
+
+// $data [$length] = 'last1'; //adiciona um elemento no final do array
+// array_push($data, 'teste'); //tambem adiciona o elemento no final do array
+
+// array_unshift($data, 'first'); //adiciona o elemento no inicio do array
+// var_dump($data[1]); //pegar valor especifico dentro do array
+
+// var_dump($data);
+
+
+// $person = ['name' => 'Carlos', 'age' => '29']; //criação de array com indece especifico
+
+// var_dump($person['name']); //não consegue pesquisar por indice 0,1,2...
+
+
+                //>>>>>REVISAR ARRAY<<<<<<<
+// $person = [
+//             'name' => 'Carlos', 'age' => 29, 
+//             'documents' => [
+//                 'cpf' => '12345678912', 'rg' => '1234569',
+//                 'cnh'=> ['123456', '456789'] // array dentro do array
+//             ]
+//         ];
+
+// var_dump($person['documents']['cnh']); //mostrando o array cnh
+
+
+    //Mudando tipos de dados
+
+
+// $name = 'Carlos';
+
+// $change = (boolean) $name; // inserindo o boolean antes da variavel, troca o valor da variavel
+
+// var_dump($change);
+
+
+// $number = 34;
+
+// $change = (string) $number;//transforma valor em string
+
+// var_dump($change);
+
+
+// $names = ['Carlos', 'Carla', 'Douglas'];
+
+// $change = (object) $names; //transforma o array em um objeto standarclas, padrão do php
+
+// var_dump($change);
+
+
+// $person = ['name' => 'Carlos', 'age' => 18];
+
+// $change = (object) $person;
+
+// var_dump($change -> age); // tras o indice desejado "age"
+
+
+    //Loopings FOR
