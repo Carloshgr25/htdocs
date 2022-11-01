@@ -224,3 +224,4 @@ echo strlen($name1); //strlen, conta o numero de caracteres
 // echo strlen($name1);
 // echo $name2; 
 //31/10/22
+// Teste pull 01/11/22
