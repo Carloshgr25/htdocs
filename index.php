@@ -315,3 +315,28 @@
 
 
     //Loopings FOR
+
+
+// $names = ['Carlos ', 'Pedro ', 'Douglas '];
+
+// for ($i=0; $i < count($names); $i++) {  // i=0; se a condição for verdadeira; i++ pos incrementa
+//     echo $names [$i];
+// }
+
+// $number = 100;
+
+// for ($i=0; $i < $number; $i++) { // i=0; se i < $number; i ++
+//     echo "$i ";
+// }
+
+
+    //Loopings While
+
+
+$names = ['Carlos ', 'Pedro ', 'Douglas '];    
+
+$i = 0;
+while ($i < count($names)) { // enquanto for verdadeiro executa
+    echo $names[$i];
+    $i++;
+}
