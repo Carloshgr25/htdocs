@@ -333,10 +333,40 @@
     //Loopings While
 
 
+// $names = ['Carlos ', 'Pedro ', 'Douglas '];    
+
+// $i = 0;
+// while ($i < count($names)) { // enquanto for verdadeiro executa
+//     echo $names[$i];
+//     $i++;
+// }
+
+
+    //Loopings Do while
+
+
+// $i = 0;
+// $y = 100;
+// do {    //faça enquanto
+//     Echo "$i ";
+//     $i++;
+// } while ($i <= $y);
+
+
+    //Foreach...para cada
+
+
 $names = ['Carlos ', 'Pedro ', 'Douglas '];    
 
-$i = 0;
-while ($i < count($names)) { // enquanto for verdadeiro executa
-    echo $names[$i];
-    $i++;
+foreach ($names as $key => $name) { 
+    echo $key . "=> " . $name; //para cada nome dentro do array, sera guardado em uma variável
 }
+
+
+    //Loopings continue e break
+
+
+// $names = ['Carlos ', 'Pedro ', 'Douglas '];     
+
+
+
