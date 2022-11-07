@@ -389,8 +389,27 @@
     //Funções
 
 
-    
+// function connection() //function para criar a função, nome que faça sentido
+// {
+//     $pdo = new PDO('mysql:host=localhost;dbname=books', 'root', ''); //criação de conexão banco de dados
+//     return $pdo;
+// }    
+
+// function getData($table) //pegar dados de uma tabela no banco de dados
+// {
+//     $connection = connection();
+//     $query = $connection->query("select * from {$table}");
+//     $query->execute();
+//     return $query->fetchAll();
+// }
+// var_dump(getData('users'));// aqui passa a tabela onde deseja fazer o select
 
 
+    //Closures
 
 
+$person = function (){ //$person(variavel) recebe a função anonima, é um objeto do tipo closures
+    return 'teste';
+}; // precisa fechar pois é do tipo closures    
+
+var_dump($person());
