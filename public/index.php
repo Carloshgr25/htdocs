@@ -356,17 +356,41 @@
     //Foreach...para cada
 
 
-$names = ['Carlos ', 'Pedro ', 'Douglas '];    
+// $names = ['Carlos ', 'Pedro ', 'Douglas '];    
 
-foreach ($names as $key => $name) { 
-    echo $key . "=> " . $name; //para cada nome dentro do array, sera guardado em uma variável
-}
+// foreach ($names as $key => $name) { 
+//     echo $key . "=> " . $name; //para cada nome dentro do array, sera guardado em uma key e uma variável
+// }
 
 
     //Loopings continue e break
 
 
-// $names = ['Carlos ', 'Pedro ', 'Douglas '];     
+// $names = ['Carlos ', 'Pedro ', 'Douglas '];
+
+// for ($i=0; $i < count($names) ; $i++) { 
+//     // if ($i == 1) { //pula o indice 1 e continua
+//     //     continue; 
+//     // }
+//     if($i == 2){ //para no indice 2
+//         break;
+//     }
+//     echo $names[$i];
+// }
+
+// foreach ($names as $key => $name) {
+//     if($key == 1){
+//         break;
+//     }
+//     echo $name;
+// }
+
+
+    //Funções
+
+
+    
+
 
 
 
