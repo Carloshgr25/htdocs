@@ -408,8 +408,56 @@
     //Closures
 
 
-$person = function (){ //$person(variavel) recebe a função anonima, é um objeto do tipo closures
-    return 'teste';
-}; // precisa fechar pois é do tipo closures    
+// $person = function (){ //$person(variavel) que recebe a função anonima function(), e vira um objeto do tipo closures
+//     return 'teste';
+// }; // precisa fechar pois é do tipo closures    
 
-var_dump($person());
+// var_dump($person());
+
+// $person = function ($name){ 
+//     return $name;
+// };    
+
+// var_dump($person('Carlos'));
+
+// function teste()
+// {
+//     $person = function (){ //dentro da função teste foi criado uma closures
+//         return 'teste';
+//     };
+//     return $person;
+// }
+
+// // var_dump(teste()); //não retorna nada pois tem somente a closures dentro da função
+// var_dump(teste()()); //retorna algo pois esta pegando o return $person; com a segunda ()
+
+
+// function teste($name)
+// {
+//     $person = function () use($name){ //use: para passar o valor para a closures
+//         return $name;
+//     };
+//     return $person;
+// }
+
+// var_dump(teste('Carlos')());
+
+
+    //Callback  
+
+// Função passada como parametros para outras funções
+
+
+function teste()
+{
+    return 'teste10';
+}
+
+function teste2($callback)
+{
+    return $callback(); //abrir e fechar parenteses logo depois de um nome de uma função executa a função
+}
+
+echo teste2('teste'); //o 'teste' é a function teste(), para chamar precisa sem como string
+
+
