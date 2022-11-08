@@ -455,7 +455,7 @@ function teste()
 
 function teste2($callback)
 {
-    return $callback(); //abrir e fechar parenteses logo depois de um nome de uma função executa a função
+    return $callback(); //abrir e fechar parenteses logo depois de um nome de uma função, executa a função
 }
 
 echo teste2('teste'); //o 'teste' é a function teste(), para chamar precisa sem como string
