@@ -448,16 +448,204 @@
 // Função passada como parametros para outras funções
 
 
-function teste()
-{
-    return 'teste10';
-}
+// function teste()
+// {
+//     return 'teste10';
+// }
 
-function teste2($callback)
-{
-    return $callback(); //abrir e fechar parenteses logo depois de um nome de uma função, executa a função
-}
+// function teste2($callback)
+// {
+//     return $callback(); //abrir e fechar parenteses logo depois de um nome de uma função, executa a função
+// }
 
-echo teste2('teste'); //o 'teste' é a function teste(), para chamar precisa sem como string
+// echo teste2('teste'); //o 'teste' é a function teste(), para chamar precisa sem como string
+
+
+// function teste($name)
+// {
+//     return 'Olá, meu nome é ' . $name;
+// }
+
+// function teste2($callback)
+// {
+//     return $callback('Carlos'); 
+// }
+
+// echo teste2('teste');
+
+
+    // Verificar se é Callback com is_callable
+
+
+// function teste($name)
+// {
+//     return 'Olá, meu nome é ' . $name;
+// }
+
+// function teste2($callback) //alguns casos pode verificar se é um callback
+// {
+//     if (is_callable($callback)) { //verifica se é realmente uma função
+//         return $callback('Carlos');
+//     }else {
+//         echo 'Não é um callback';
+//     }  
+// }
+// $user = 'João';
+// // echo teste2('teste'); // é um callback
+// echo teste2($user); // não é um callback
+
+
+    // call_user_func espera um callback como parametro, utilizamos quando queremos passar a função e os parametros que ela exige
+
+
+// function teste($name)
+// {
+//     return 'Ola, meu nome é ' . $name;
+// }  
+
+// echo call_user_func('teste', 'Carlos'); //funciona pois esta pegando a função teste e o parametro para a funcão teste que é $name
+//echo call_user_func('teste'); // não funciona pois o call_user esta esperando um paramento, e não uma variavel $name
+
+
+    //
+
+
+// class User
+// {
+//     public function teste()
+//     {
+//         return 'teste';
+//     }
+// }   
+
+// $user = new User;//estanciou o User
+
+// echo call_user_func([$user, 'teste']);// array, 1 valor é o objeto, 2 valor metodo que quer executar
+
+
+// class User
+// {
+//     public function teste($name)
+//     {
+//         return 'Olá, meu nome é ' . $name;
+//     }
+// }   
+
+// $user = new User;//estanciou o User
+
+// echo call_user_func([$user, 'teste'], 'Carlos');// 'Carlos' é o parametroe esperado pelo callback
+
+
+// class User
+// {
+//     public static function teste($name, $age)
+//     {
+//         return 'Olá, meu nome é ' . $name . ' e minha idade é '. $age;
+//     }
+// }   
+
+// //$user = new User;// se for metodo estatico pode ou não instanciar
+
+// echo call_user_func(['User', 'teste'], 'Carlos', 29);
+
+
+    //call_user_func dentro de outras funções
+
+
+// function teste($name)
+// {
+//     return 'teste ' . $name;
+// }    
+
+// function teste2($callback)
+// {
+//     return call_user_func($callback, 'Carlos');
+// }
+
+// echo teste2('teste');
+
+
+    //--invoke
+
+
+// class User
+// {
+//     public function __invoke()
+//     {
+//         return 'teste01';
+//     }
+// }
+
+// $user = new User;
+
+// function teste($callback)
+// {
+//     return $callback();
+// }
+
+// echo teste($user);
+
+
+    //call_user_func_array
+
+
+// function teste($name, $age)
+// {
+//     return 'Nome: ' . $name . ' Idade: '. $age;
+// }    
+
+// echo call_user_func_array('teste', ['Carlos', 38]);
+
+
+    //Closures com o callback
+
+
+// $user = function($name)
+// {
+//     return 'teste ' . $name;
+// };
+
+// function teste($callback)
+// {
+//     return call_user_func($callback, 'Carlos');
+// }
+
+// echo teste($user);
+
+
+    //verificando se uma variável existe - isset(variavel)
+
+
+// $name = 'Carlos'; 
+
+// if(isset($name)){ 
+//     echo 'variavel existe';
+// }else{
+//     echo 'vaiavel não existe';
+// }
+
+// $person = ['name' => 'Carlos', 'age' => '29'];
+
+// echo isset($person['name']);
+
+
+    //Variáveis super globais
+
+
+// $_COOKIE valor guardado no navegador que posso resgatar em qualquer lugar do sistema, tem data de validade, posoo inserir uma data de validade, pode guardar varios tipos de dados, pode excluir manualmente
+// $_SESSION é guardado no navegador mas não é guardado o valor da sessão, guarda id, depois que chama a sessão pelo id resgata o valor
+// $_ENV aula especifica
+// $_FILES pegar arquivo enviado por um formulário
+// $_GET "seusite.com.br?id=20&name=alexandre" consegue pegar estas /variaveis id e name da url
+// $_POST  pega os valores enviados do header
+// $_REQUEST pega os valores do GET ou POST
+// $_SERVER aula especifica
+
+// setcookie('name', 'Carlos', time() + 2 * 24 * 60 * 60);//criar cookie
+setcookie('curso', 'PHP', strtotime('+5days'));
+
+
+
+
 
 
