@@ -641,9 +641,28 @@
 // $_REQUEST pega os valores do GET ou POST
 // $_SERVER aula especifica
 
-// setcookie('name', 'Carlos', time() + 2 * 24 * 60 * 60);//criar cookie
-setcookie('curso', 'PHP', strtotime('+5days'));
 
+    //$_COOKIE
+
+
+// setcookie('name', 'Carlos ', time() + 2 * 24 * 60 * 60);//criar cookie
+// setcookie('curso', 'PHP ', strtotime('+3days'));
+// //setcookie('idade', '29', strtotime('+4days'));
+
+// setcookie('idade', '29', strtotime('-4days')); //excluir cookie
+
+
+    //$_SESSION
+
+
+session_start(); //starta uma session
+
+//echo session_id(); //ID da sessão, é guardado no navegador
+
+require './teste.php'; //iniciar a sessão
+
+$_SESSION['name'] = ' Carlos2 ';//cria uma session
+$_SESSION['person'] = ['name' => 'Carlos', 'age' => '29'];
 
 
 
