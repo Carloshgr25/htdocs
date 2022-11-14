@@ -25,14 +25,13 @@
 // }
 
 
-$session = $_SESSION['name'];
-$session2 = $_SESSION['person'];
+//$session = $_SESSION['name'];
 
-unset($session);// exclui uma session
+//unset($_SESSION['name']);// exclui uma session
 // session_destroy(); //exclui todas as sessões 
 
-echo (isset($session)) ? 'Sessão existe' . $session : 'Sessão não existe '; //outra forma de fazer if else
+//echo (isset($session)) ? 'Sessão existe' . $session : 'Sessão não existe '; //outra forma de fazer if else
 
-echo (isset($session2)) ? var_dump($session2) : 'Sessão não existe ';
+//echo (isset($_SESSION['person'])) ? var_dump($_SESSION['person']) : 'Sessão não existe ';
 
 

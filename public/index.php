@@ -655,16 +655,28 @@
     //$_SESSION
 
 
-session_start(); //starta uma session
+//session_start(); //starta uma session
 
-//echo session_id(); //ID da sessão, é guardado no navegador
+// session_regenerate_id(); //altera o id 
+// echo session_id(); //ID da sessão, é guardado no navegador
 
-require './teste.php'; //iniciar a sessão
+//require './teste.php'; //iniciar a sessão
 
-$_SESSION['name'] = ' Carlos2 ';//cria uma session
-$_SESSION['person'] = ['name' => 'Carlos', 'age' => '29'];
+//$_SESSION['name'] = ' Carlos2 ';//cria uma session
+//$_SESSION['person'] = ['name' => 'Carlos', 'age' => '29'];
 
 
+    //Variáveis de ambiente
 
+//Instalar o composer
+//clonar arquivos pelo composer de um diretório composer require vlucas/phpdotenv
+//criar require para autoload 
+//copiar codigo para carregar .env   
+
+require '../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+var_dump($_ENV['DATABASE']); //tem que instalar o composer para utilizar o .env
 
 
