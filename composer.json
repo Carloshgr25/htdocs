@@ -1,0 +1,17 @@
+{
+    "name": "webmaia/htdocs",
+    "autoload": {
+        "psr-4": {
+            "Webmaia\\Htdocs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carloshgr25",
+            "email": "chgregorocha@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
