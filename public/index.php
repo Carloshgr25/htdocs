@@ -673,10 +673,33 @@
 //criar require para autoload 
 //copiar codigo para carregar .env   
 
-require '../vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+// require '../vendor/autoload.php';
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
 
-var_dump($_ENV['DATABASE']); //tem que instalar o composer para utilizar o .env
+// var_dump($_ENV['DATABASE']); //tem que instalar o composer para utilizar o .env
 
 
+// require '../vendor/autoload.php';
+// $dotenv = Dotenv\Dotenv::createImmutable($_SERVER['DOCUMENT_ROOT']);
+// $dotenv->load();
+
+// var_dump($_SERVER);
+
+// var_dump($_ENV['DATABASE']);
+
+// require '../vendor/autoload.php';
+// $dotenv = Dotenv\Dotenv::createImmutable('../'); //está pegando o .env que esta fora da pasta public
+// $dotenv->load();
+
+
+// var_dump($_ENV['DATABASE2']);
+
+
+    //GET e POST
+
+
+// GET pega as variaveis da url
+//POST pega os valores do header da requisição 
+
+var_dump($_GET);
