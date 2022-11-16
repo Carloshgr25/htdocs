@@ -35,3 +35,5 @@
 //echo (isset($_SESSION['person'])) ? var_dump($_SESSION['person']) : 'Sessão não existe ';
 
 
+// var_dump($_POST['name']);
+var_dump($_REQUEST['name']);

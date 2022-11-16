@@ -699,7 +699,9 @@
     //GET e POST
 
 
-// GET pega as variaveis da url
+//GET pega as variaveis da url
 //POST pega os valores do header da requisição 
 
-var_dump($_GET);
+//var_dump($_GET); passar as variaveis pela url http://localhost:5000/?id=45&email=teste@email.com.br
+
+
