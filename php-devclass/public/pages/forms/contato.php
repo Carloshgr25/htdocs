@@ -8,7 +8,7 @@ require "../../../bootstrap.php";
 if (isEmpty()) {
     flash('message', 'Preencha todos os campos');
 
-    header("location:/?pages=contato");
+    return redirect("contato");
 }
 
 $validate = validate([

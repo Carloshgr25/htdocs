@@ -34,3 +34,15 @@ function isEmpty(){
 
     return $empty;
 }
+
+
+function redirect($target){
+
+    return header("location:/?pages={$target}");
+}
+
+
+function redirectToHome(){
+
+    return header("location:/");
+}
